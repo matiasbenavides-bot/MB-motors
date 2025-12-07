@@ -31,7 +31,8 @@ const productosDestacados = [
   {
     nombre: "Alternador Toyota Corolla",
     precio: "S/ 450",
-    imagen: ""
+    imagen: "https://via.placeholder.com/300",
+  },
   {
     nombre: "Motor de Arranque Hyundai Accent",
     precio: "S/ 380",
@@ -68,5 +69,3 @@ productosDestacados.forEach(p => {
     </div>
   `;
 });
-
-
