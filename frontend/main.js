@@ -1,4 +1,31 @@
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
 
+  // Abrir / cerrar desde el botón
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation(); 
+    nav.classList.toggle("active");
+    hamburger.classList.toggle("active");
+  });
+
+
+  document.addEventListener("click", (e) => {
+    const clickDentroMenu = nav.contains(e.target);
+    const clickEnBoton = hamburger.contains(e.target);
+
+    if (!clickDentroMenu && !clickEnBoton) {
+      nav.classList.remove("active");
+      hamburger.classList.remove("active");
+    }
+  });
+
+  // Cerrar al tocar un link
+  document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+      hamburger.classList.remove("active");
+    });
+  });
 
 const productosDestacados = [
   {
