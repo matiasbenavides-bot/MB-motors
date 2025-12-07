@@ -1,0 +1,380 @@
+body {
+  margin: 0;
+   font-family: 'Montserrat', sans-serif;
+  background: #0d0d0d;
+  color: white;
+}
+
+header {
+  background: black;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 span {
+  color: red;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.5s;
+}
+nav a:hover{
+    color: red;
+    transition: 0.5s;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(black, #1a1a1a);
+}
+
+.hero .btn {
+  background: red;
+  color: white;
+  padding: 15px 30px;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+.hero .btn:hover {
+    transition: 0.5s;
+    background-color: rgb(108, 0, 0);
+}
+.titulo {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 40px 0;
+}
+
+.categorias {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.categorias button {
+  background: black;
+  color: white;
+  border: 1px solid red;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.producto {
+  background: #1a1a1a;
+  padding: 20px;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.producto a {
+  display: inline-block;
+  margin-top: 10px;
+  background: red;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+footer {
+  background: black;
+  text-align: center;
+  padding: 15px;
+}
+ .p{
+    width: 100px;
+ }
+ 
+/* ============================================================
+   🔵 SECCIÓN 4 — CATEGORÍAS
+============================================================ */
+
+/* ====== SECCIÓN ====== */
+.categorias.dark {
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.categorias.dark h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #f5f5f5;
+}
+.card img {
+  width: 100%;
+  height: 150px;
+  background: #333;          /* color de fondo si no hay imagen */
+  background-size: cover;
+  background-position: center;
+}
+
+/* ====== GRID RESPONSIVE ====== */
+.cards-container {
+  display: grid;
+  gap: 20px;
+}
+
+/* CELULAR → 1 columna */
+@media (max-width: 599px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TABLET → 2 columnas */
+@media (min-width: 600px) and (max-width: 899px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP → 3 columnas */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* GRANDES → 4 columnas */
+@media (min-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ====== CARDS ====== */
+.dark-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.dark-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* IMAGEN ESTÁNDAR */
+.card-img {
+  height: 150px;
+  background: #333;
+  background-size: cover;
+  background-position: center;
+}
+
+/* TITULOS */
+.dark-card h3 {
+  padding: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* ===============================
+   🔥 SECCIÓN NOSOTROS EN CARDS
+================================ */
+
+.nosotros-dark {
+  padding: 60px 20px;
+  background: #0d0d0d;
+}
+
+.nosotros-grid {
+  display: grid;
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Responsive automático */
+@media (max-width: 699px) {
+  .nosotros-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1099px) {
+  .nosotros-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .nosotros-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.nosotros-card {
+  background: #1a1a1a;
+  border: 1px solid red;
+  border-radius: 14px;
+  padding: 25px;
+  color: white;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.nosotros-card h3 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.nosotros-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.nosotros-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+/* =======================================
+   🔥 SECCIÓN PRODUCTOS DESTACADOS
+======================================= */
+
+.destacados-dark {
+  padding: 80px 20px;
+  background: #0d0d0d;
+}
+
+.destacados-grid {
+  display: grid;
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 699px) {
+  .destacados-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1099px) {
+  .destacados-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .destacados-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.destacado-card {
+  background: #1a1a1a;
+  border: 1px solid red;
+  border-radius: 14px;
+  overflow: hidden;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.destacado-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.destacado-img {
+  height: 180px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.destacado-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.destacado-info {
+  padding: 18px;
+  text-align: center;
+}
+
+.destacado-info h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.destacado-info p {
+  margin: 5px 0;
+}
+
+.destacado-precio {
+  color: #00ff88;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.destacado-info a {
+  display: inline-block;
+  margin-top: 10px;
+  background: red;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.breadcrumb {
+    border: 3px solid red;
+    border-radius: 10px;
+  padding: 15px 25px;
+  background: #111;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.breadcrumb:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
